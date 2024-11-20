@@ -29,7 +29,7 @@ class Program
             Console.WriteLine($"The total price for your gym membership is: {totalPrice}");
         }
 
-        // Example 3. Usage of the calculator method
+        // Assignment 3. Usage of the calculator method
         {
             Console.Write("Enter the first number: ");
             double num1 = Convert.ToDouble(Console.ReadLine());
@@ -44,7 +44,7 @@ class Program
             Console.WriteLine($"The result is: {calculatorResult}");
         }
 
-        // Assignment 4. Usage of the HandleMenuOption method
+        // Assignment 4. Usage of the SelectMenuOption method
         {
             Console.WriteLine("Enter a menu option: (help, add, delete, edit, find, list)");
             string? selected = Console.ReadLine()?.ToLower();
