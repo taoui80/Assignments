@@ -2,7 +2,7 @@ using System;
 
 namespace ConditionalStatements;
 
-public class MethodCalls
+public class ServiceMethods
 {
     // Assignment 1. - Method to calculate VAT
     public static decimal CalculateVAT(string? product, decimal price)

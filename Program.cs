@@ -13,7 +13,7 @@ class Program
             Console.WriteLine("Enter the price of that product: ");
             decimal price = Convert.ToDecimal(Console.ReadLine());
 
-            decimal vat = MethodCalls.CalculateVAT(product, price);
+            decimal vat = ServiceMethods.CalculateVAT(product, price);
             Console.WriteLine($"The VAT for {product} at price {price} is {vat}");
         }
 
@@ -25,7 +25,7 @@ class Program
             Console.Write("Do you want a premium membership? (true/false): ");
             bool isPremium = Convert.ToBoolean(Console.ReadLine());
 
-            int totalPrice = MethodCalls.CalculateMembershipPrice(age, isPremium);
+            int totalPrice = ServiceMethods.CalculateMembershipPrice(age, isPremium);
             Console.WriteLine($"The total price for your gym membership is: {totalPrice}");
         }
 
@@ -40,7 +40,7 @@ class Program
             Console.Write("Enter the second number: ");
             double num2 = Convert.ToDouble(Console.ReadLine());
 
-            double calculatorResult = MethodCalls.Calculator(operation, num1, num2);
+            double calculatorResult = ServiceMethods.Calculator(operation, num1, num2);
             Console.WriteLine($"The result is: {calculatorResult}");
         }
 
@@ -50,7 +50,7 @@ class Program
             string? selected = Console.ReadLine()?.ToLower();
 
             // Call the method with the user's selection
-            MethodCalls.SelectMenuOption(selected);
+            ServiceMethods.SelectMenuOption(selected);
         }
     }
 }
