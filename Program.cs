@@ -5,6 +5,34 @@ class Program
 {
     static void Main(string[] args)
     {
+    // Assignment Object constructors
+        
+        // Create a CurrencyConverter instance
+        CurrencyConverter converter = new CurrencyConverter();
+
+        // Create an Account instance with an initial balance in SEK
+        Account account = new Account
+        {
+            Id = 1,
+            Balance = new Money(1000m, Currency.SEK) 
+        };
+
+        Console.WriteLine($"Initial Balance: {account.Balance.Amount:F2} {account.Balance.Currency}");
+
+        // Convert the balance from SEK to Dollar
+        account.Balance.ConvertCurrency(converter, Currency.Dollar);
+        Console.WriteLine($"Balance after conversion to Dollar: {account.Balance.Amount:F2} {account.Balance.Currency}");
+
+        // Convert the balance from Dollar to Euro
+        account.Balance.ConvertCurrency(converter, Currency.Euro);
+        Console.WriteLine($"Balance after conversion to Euro: {account.Balance.Amount:F2} {account.Balance.Currency}");
+
+        // Convert the balance back to SEK
+        account.Balance.ConvertCurrency(converter, Currency.SEK);
+        Console.WriteLine($"Balance after conversion back to SEK: {account.Balance.Amount:F2} {account.Balance.Currency}");
+        
+
+        /*
         // Assignment 1. Usage of the VAT calculation method
         {
             Console.WriteLine("Enter the product type(music, food, alcohol): ");
@@ -52,5 +80,6 @@ class Program
             // Call the method with the user's selection
             ServiceMethods.SelectMenuOption(selected);
         }
+        */
     }
 }
