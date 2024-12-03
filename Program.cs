@@ -5,8 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
-    // Assignment Object constructors
-        
+        // Assignment Object constructors
+
         // Create a CurrencyConverter instance
         CurrencyConverter converter = new CurrencyConverter();
 
@@ -14,7 +14,7 @@ class Program
         Account account = new Account
         {
             Id = 1,
-            Balance = new Money(1000m, Currency.SEK) 
+            Balance = new Money(1000m, Currency.SEK)
         };
 
         Console.WriteLine($"Initial Balance: {account.Balance.Amount:F2} {account.Balance.Currency}");
@@ -30,7 +30,7 @@ class Program
         // Convert the balance back to SEK
         account.Balance.ConvertCurrency(converter, Currency.SEK);
         Console.WriteLine($"Balance after conversion back to SEK: {account.Balance.Amount:F2} {account.Balance.Currency}");
-        
+
 
         /*
         // Assignment 1. Usage of the VAT calculation method

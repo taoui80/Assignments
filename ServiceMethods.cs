@@ -51,62 +51,62 @@ public class ServiceMethods
         }
 
         return gymMembershipPrice;
-    } 
+    }
 
     // Assignment 3 - Method to calculate mathematical operation
     public static double Calculator(string? operation, double num1, double num2)
     {
-    switch (operation)
+        switch (operation)
         {
-        case "+":
-            return num1 + num2;
-        case "-":
-            return num1 - num2;
-        case "*":
-            return num1 * num2;
-        case "/":
-            if (num2 == 0)
-            throw new DivideByZeroException("Division by zero is not allowed.");
-            return num1 / num2;
-        default:
-            throw new ArgumentException("Invalid operation. Please use +, -, *, or /.");
+            case "+":
+                return num1 + num2;
+            case "-":
+                return num1 - num2;
+            case "*":
+                return num1 * num2;
+            case "/":
+                if (num2 == 0)
+                    throw new DivideByZeroException("Division by zero is not allowed.");
+                return num1 / num2;
+            default:
+                throw new ArgumentException("Invalid operation. Please use +, -, *, or /.");
         }
     }
 
     // Assignment 4. - A menu option method that print out unique message for the selected one
     public static void SelectMenuOption(string? optionSelected)
     {
-    switch(optionSelected)
+        switch (optionSelected)
         {
-	    case "help": 
-		    Console.WriteLine("You chose 'help'. Here are general guidelines for the menu");
-		    break;
+            case "help":
+                Console.WriteLine("You chose 'help'. Here are general guidelines for the menu");
+                break;
 
-	    case "add": 
-		    Console.WriteLine("You chose 'add'. Here are guidelines on how you add an option");
-		    break;
-	
-	    case "delete": 
-		    Console.WriteLine("You chose 'delete'. Here are guidelines on how you delete an option");
-		    break;
+            case "add":
+                Console.WriteLine("You chose 'add'. Here are guidelines on how you add an option");
+                break;
 
-	    case "edit": 
-		    Console.WriteLine("You chose 'edit'. Here are guidelines on how you edit an option");
-		    break;
+            case "delete":
+                Console.WriteLine("You chose 'delete'. Here are guidelines on how you delete an option");
+                break;
 
-	    case "find": 
-		    Console.WriteLine("You chose 'find'. Here are guidelines on how you search for an option");
-		    break;
+            case "edit":
+                Console.WriteLine("You chose 'edit'. Here are guidelines on how you edit an option");
+                break;
 
-	    case "list": 
-		    Console.WriteLine("You chose 'list'. Here are guidelines on how you display all options");
-		    break;
+            case "find":
+                Console.WriteLine("You chose 'find'. Here are guidelines on how you search for an option");
+                break;
 
-	    default:
-		    Console.WriteLine("Invalid option. Please try again.");
-            break;
+            case "list":
+                Console.WriteLine("You chose 'list'. Here are guidelines on how you display all options");
+                break;
+
+            default:
+                Console.WriteLine("Invalid option. Please try again.");
+                break;
         }
- 
+
     }
 
 }

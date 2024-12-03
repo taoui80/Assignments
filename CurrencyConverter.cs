@@ -17,45 +17,45 @@ public class CurrencyConverter
     public decimal ConvertAmount(decimal amount, Currency fromCurrency, Currency toCurrency)
     {
         if (fromCurrency == toCurrency)
-        return amount; 
+            return amount;
 
         switch (fromCurrency)
         {
-        case Currency.SEK:
-            switch (toCurrency)
-            {
-                case Currency.Dollar:
-                    return amount * sekToDollarRate;
-                case Currency.Euro:
-                    return amount * sekToEuroRate;
-            }
-            break;
+            case Currency.SEK:
+                switch (toCurrency)
+                {
+                    case Currency.Dollar:
+                        return amount * sekToDollarRate;
+                    case Currency.Euro:
+                        return amount * sekToEuroRate;
+                }
+                break;
 
-        case Currency.Dollar:
-            switch (toCurrency)
-            {
-                case Currency.SEK:
-                    return amount * dollarToSekRate;
-                case Currency.Euro:
-                    return amount * dollarToEuroRate;
-            }
-            break;
+            case Currency.Dollar:
+                switch (toCurrency)
+                {
+                    case Currency.SEK:
+                        return amount * dollarToSekRate;
+                    case Currency.Euro:
+                        return amount * dollarToEuroRate;
+                }
+                break;
 
-        case Currency.Euro:
-            switch (toCurrency)
-            {
-                case Currency.SEK:
-                    return amount * euroToSekRate;
-                case Currency.Dollar:
-                    return amount * euroToDollarRate;
-            }
-            break;
+            case Currency.Euro:
+                switch (toCurrency)
+                {
+                    case Currency.SEK:
+                        return amount * euroToSekRate;
+                    case Currency.Dollar:
+                        return amount * euroToDollarRate;
+                }
+                break;
 
-        default:
-            throw new ArgumentException("Invalid currency conversion");
+            default:
+                throw new ArgumentException("Invalid currency conversion");
         }
 
         // If no valid conversion case is matched
-        throw new ArgumentException("Invalid currency conversion");    
-    }    
+        throw new ArgumentException("Invalid currency conversion");
+    }
 }
